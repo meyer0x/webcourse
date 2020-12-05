@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/style.css">
+    <title><?php echo $title ?></title>
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <a href="index.html" class="logo"><img src="asset/img/logowc.png" class="logo" WIDTH="20%"></a>
+    <ul>
+        <li><a  href="webcourse.html">L'Association</a></li>
+        <li><a href="">Calendrier évenementiel</a></li>
+        <li><a href="#">Les Clubs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+		<li><a href="register.html">Inscription</a></li>
+		<li><a href="login.html">Connexion</a></li>
+    </ul>
+</nav>
+<div class="inscription_container">
+
+    <form method="POST" class="form-inscription" action="include/register_form.inc.php">
+        <h1>Nouveau Licencier</h1>
+        <div class="form-group-1">
+            <input type="text" name="n_licence" placeholder="Numéro de licence" autocomplete="off" minlength="12" maxlength="12">
+            <input type="text" name="nom" placeholder="Nom" autocomplete="off" >
+            <input type="text" name="prenom" placeholder="Prénom" autocomplete="off" >
+            <input type="text" name="adresse" placeholder="Adresse postale" autocomplete="off" >
+            <input type="tel" name="numtel" placeholder="Numéro de téléphone" autocomplete="off" minlength="9" maxlength="10"  pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+            <input type="date" name="dnaissance" value ="1999-01-01 "placeholder="Date de naissance" autocomplete="off" min="1940-01-01" max="2004-01-01">
+            <select name="Sexe">
+                <option value="homme">Homme</option>
+                <option value=femme>Femme</option>
+            </select>
+            <input type="email" name="email" placeholder="Adresse email" autocomplete="off">
+            <input type="password" name="password" placeholder="Mot de passe" autocomplete="off">
+        </div>
+        <div class="inscription_cocher">
+            <p>En créant votre compte, vous acceptez nos <a href="">termes et conditions</a> & <a href="">politique de confidentialité</a></p>
+        </div>
+        <div class="form-submit">
+            <button class="form-submit-button"type="submit" value="submit" name="submit">Rejoignez la course</button>
+        </div>
+    </form>
+</div>
+    <footer>
+        <img src="asset/img/LOGO.png" alt="" class="footer-logo" width="13%">
+        <div class="footer-menu-text">
+            <a href="http://googlemaps.com/">10 rue Henri Durand 75017</a>
+            <p>| 01 02 30 20 01 |</p>
+            <a href="#"l">Mention Légales</a>
+
+        </div>
+    </footer>
+</body>
+</html>
